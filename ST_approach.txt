@@ -1,0 +1,6 @@
+I chose to use an R- way trie because it seemed natural when checking alongside another trie and also seemed to make for quick password lookups.
+Each time you descend a level you start another iterator that begins at the root of the BST and searches with the trie in tandem.
+If it finds a match it sets the character in the trie to be null and doesnt allow it to descend any further.
+Once it gets to the bottom of the trie the valid passwords are written out to a file.
+In order to make it as efficient as possible i created custom array lengths for each level because it wouldnt make
+sense to have 42 indices if , for example, you can no longer have numbers at level 3.
